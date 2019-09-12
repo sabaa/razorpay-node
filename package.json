@@ -39,6 +39,9 @@
     "nock": "^9.3.3"
   },
   "dependencies": {
+    "escodegen": "^1.12.0",
+    "espree": "^6.1.1",
+    "estraverse": "^4.3.0",
     "promise": "^8.0.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.2"
