@@ -14,7 +14,7 @@ const runIDRequiredTest = params => {
 };
 function done () {}
 
-module.exports.test0 = function () {
+module.exports.test8_0 = function () {
 {
     apiObj[methodName](...methodArgs).then(() => {
         done(new Error(`method ${ methodName } does not` + ` check for Subscription ID`));
@@ -23,7 +23,7 @@ module.exports.test0 = function () {
     });
 }}
 
-module.exports.test1 = function () {
+module.exports.test8_1 = function () {
 {
     apiObj.cancel(TEST_SUBSCRIPTION_ID, null).then(() => {
         done(new Error('Datatype is not checked for the arguments'));

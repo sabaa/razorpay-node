@@ -7,7 +7,7 @@ const equal = require('deep-equal');
 const {getDateInSecs} = require('../../dist/utils/razorpay-utils');
 function done () {}
 
-module.exports.test0 = function () {
+module.exports.test2_0 = function () {
 {
     let params = {
         name: 'test',
@@ -36,7 +36,7 @@ module.exports.test0 = function () {
     });
 }}
 
-module.exports.test1 = function () {
+module.exports.test2_1 = function () {
 {
     const TEST_CUSTOMER_ID = 'cust_6fqBqgrfTSuj5v';
     let params = {
@@ -62,7 +62,7 @@ module.exports.test1 = function () {
     });
 }}
 
-module.exports.test2 = function () {
+module.exports.test2_2 = function () {
 {
     const TEST_CUSTOMER_ID = 'cust_6fqBqgrfTSuj5v';
     mocker.mock({ url: `/customers/${ TEST_CUSTOMER_ID }` });
@@ -72,7 +72,7 @@ module.exports.test2 = function () {
     });
 }}
 
-module.exports.test3 = function () {
+module.exports.test2_3 = function () {
 {
     const TEST_CUSTOMER_ID = 'cust_6fqBqgrfTSuj5v';
     mocker.mock({ url: `/customers/${ TEST_CUSTOMER_ID }/tokens` });
@@ -82,7 +82,7 @@ module.exports.test3 = function () {
     });
 }}
 
-module.exports.test4 = function () {
+module.exports.test2_4 = function () {
 {
     const TEST_CUSTOMER_ID = 'cust_6fqBqgrfTSuj5v';
     const TEST_TOKEN_ID = 'tkn_YDovP0Tg6fpsp';
@@ -93,7 +93,7 @@ module.exports.test4 = function () {
     });
 }}
 
-module.exports.test5 = function () {
+module.exports.test2_5 = function () {
 {
     const TEST_CUSTOMER_ID = 'cust_6fqBqgrfTSuj5v';
     const TEST_TOKEN_ID = 'tkn_YDovP0Tg6fpsp';

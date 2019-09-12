@@ -7,7 +7,7 @@ const equal = require('deep-equal');
 const {getDateInSecs} = require('../../dist/utils/razorpay-utils');
 function done () {}
 
-module.exports.test0 = function () {
+module.exports.test7_0 = function () {
 {
     let expectedParams = {
         skip: 0,
@@ -20,7 +20,7 @@ module.exports.test0 = function () {
     });
 }}
 
-module.exports.test1 = function () {
+module.exports.test7_1 = function () {
 {
     let fromDate = 'Aug 25, 2016';
     let toDate = 'Aug 30, 2016';
@@ -45,7 +45,7 @@ module.exports.test1 = function () {
     });
 }}
 
-module.exports.test2 = function () {
+module.exports.test7_2 = function () {
 {
     let paymentId = 'pay_sometestId';
     let params = { payment_id: paymentId };
@@ -56,12 +56,12 @@ module.exports.test2 = function () {
     });
 }}
 
-module.exports.test3 = function () {
+module.exports.test7_3 = function () {
 {
     assert.throws(rzpInstance.refunds.fetch, '`refund_id` is mandatory', 'Should throw exception when refundId is not provided');
 }}
 
-module.exports.test4 = function () {
+module.exports.test7_4 = function () {
 {
     let refundId = 'rfn_sometestId';
     mocker.mock({ url: `/refunds/${ refundId }` });
@@ -71,7 +71,7 @@ module.exports.test4 = function () {
     });
 }}
 
-module.exports.test5 = function () {
+module.exports.test7_5 = function () {
 {
     let paymentId = 'pay_sometestId';
     let refundId = 'rfn_sometestId';

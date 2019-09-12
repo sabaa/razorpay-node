@@ -14,7 +14,7 @@ const runIDRequiredTest = params => {
 };
 function done () {}
 
-module.exports.test0 = function () {
+module.exports.test3_0 = function () {
 {
     apiObj[methodName](...methodArgs).then(() => {
         done(new Error(`method ${ methodName } does not` + ` check for Invoice ID`));
@@ -23,7 +23,7 @@ module.exports.test0 = function () {
     });
 }}
 
-module.exports.test1 = function () {
+module.exports.test3_1 = function () {
 {
     mocker.mock({
         url: `${ SUB_PATH }/${ TEST_INVOICE_ID }/notify_by/${ undefined }`,

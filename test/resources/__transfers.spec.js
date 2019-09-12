@@ -7,7 +7,7 @@ const equal = require('deep-equal');
 const {getDateInSecs} = require('../../dist/utils/razorpay-utils');
 function done () {}
 
-module.exports.test0 = function () {
+module.exports.test9_0 = function () {
 {
     let params = {
         account: 'acc_7jO4N6LScw5CEG',
@@ -36,7 +36,7 @@ module.exports.test0 = function () {
     });
 }}
 
-module.exports.test1 = function () {
+module.exports.test9_1 = function () {
 {
     const TEST_PAYMENT_ID = 'pay_6fqBqgrfTSuj5v';
     let params = {
@@ -60,7 +60,7 @@ module.exports.test1 = function () {
     });
 }}
 
-module.exports.test2 = function () {
+module.exports.test9_2 = function () {
 {
     const TEST_TRANSFER_ID = 'trf_6fqBqgrfTSuj5v';
     let params = {
@@ -82,7 +82,7 @@ module.exports.test2 = function () {
     });
 }}
 
-module.exports.test3 = function () {
+module.exports.test9_3 = function () {
 {
     const TEST_TRANSFER_ID = 'trf_6fqBqgrfTSuj5v';
     let params = {
@@ -106,7 +106,7 @@ module.exports.test3 = function () {
     });
 }}
 
-module.exports.test4 = function () {
+module.exports.test9_4 = function () {
 {
     const TEST_TRANSFER_ID = 'trf_6fqBqgrfTSuj5v';
     mocker.mock({ url: `/transfers/${ TEST_TRANSFER_ID }` });
@@ -116,7 +116,7 @@ module.exports.test4 = function () {
     });
 }}
 
-module.exports.test5 = function () {
+module.exports.test9_5 = function () {
 {
     let expectedParams = {
         skip: 0,
@@ -129,7 +129,7 @@ module.exports.test5 = function () {
     });
 }}
 
-module.exports.test6 = function () {
+module.exports.test9_6 = function () {
 {
     let fromDate = 'Aug 25, 2016';
     let toDate = 'Aug 30, 2016';

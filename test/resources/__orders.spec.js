@@ -7,7 +7,7 @@ const equal = require('deep-equal');
 const {getDateInSecs} = require('../../dist/utils/razorpay-utils');
 function done () {}
 
-module.exports.test0 = function () {
+module.exports.test4_0 = function () {
 {
     let expectedParams = {
         skip: 0,
@@ -20,7 +20,7 @@ module.exports.test0 = function () {
     });
 }}
 
-module.exports.test1 = function () {
+module.exports.test4_1 = function () {
 {
     let fromDate = 'Aug 25, 2016';
     let toDate = 'Aug 30, 2016';
@@ -49,12 +49,12 @@ module.exports.test1 = function () {
     });
 }}
 
-module.exports.test2 = function () {
+module.exports.test4_2 = function () {
 {
     assert.throws(rzpInstance.orders.fetch, '`order_id` is mandatory', 'Should throw exception when orderId is not provided');
 }}
 
-module.exports.test3 = function () {
+module.exports.test4_3 = function () {
 {
     let orderId = 'order_sometestId';
     mocker.mock({ url: `/orders/${ orderId }` });
@@ -64,7 +64,7 @@ module.exports.test3 = function () {
     });
 }}
 
-module.exports.test4 = function () {
+module.exports.test4_4 = function () {
 {
     assert.throws(rzpInstance.orders.create, '`amount` is mandatory', 'Should throw exception when amount is not provided');
     try {
@@ -79,7 +79,7 @@ module.exports.test4 = function () {
     }
 }}
 
-module.exports.test5 = function () {
+module.exports.test4_5 = function () {
 {
     let orderAmount = 100;
     let receipt = 'testreceiptid';
@@ -111,12 +111,12 @@ module.exports.test5 = function () {
     });
 }}
 
-module.exports.test6 = function () {
+module.exports.test4_6 = function () {
 {
     assert.throws(rzpInstance.orders.fetchPayments, '`order_id` is mandatory', 'Throw exception when order_id is not provided');
 }}
 
-module.exports.test7 = function () {
+module.exports.test4_7 = function () {
 {
     let orderId = 'order_sometestId';
     mocker.mock({ url: `/orders/${ orderId }/payments` });

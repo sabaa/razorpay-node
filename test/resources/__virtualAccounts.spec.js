@@ -13,7 +13,7 @@ const runIDRequiredTest = params => {
 };
 function done () {}
 
-module.exports.test0 = function () {
+module.exports.test10_0 = function () {
 {
     apiObj[methodName](...methodArgs).then(() => {
         done(new Error(`method ${ methodName } does not` + ` check for Virtual Account ID`));
@@ -22,7 +22,7 @@ module.exports.test0 = function () {
     });
 }}
 
-module.exports.test1 = function () {
+module.exports.test10_1 = function () {
 {
     let expectedParams = {
         skip: 0,
@@ -35,7 +35,7 @@ module.exports.test1 = function () {
     });
 }}
 
-module.exports.test2 = function () {
+module.exports.test10_2 = function () {
 {
     let fromDate = 'Aug 25, 2016', toDate = 'Aug 30, 2016', fromDateInSecs = getDateInSecs(fromDate), toDateInSecs = getDateInSecs(toDate), expectedParams = {
             from: fromDateInSecs,
@@ -56,7 +56,7 @@ module.exports.test2 = function () {
     });
 }}
 
-module.exports.test3 = function () {
+module.exports.test10_3 = function () {
 {
     mocker.mock({ url: `${ SUB_PATH }/${ undefined }` });
     rzpInstance.virtualAccounts.fetch().then(() => {
@@ -66,7 +66,7 @@ module.exports.test3 = function () {
     });
 }}
 
-module.exports.test4 = function () {
+module.exports.test10_4 = function () {
 {
     mocker.mock({ url: `${ SUB_PATH }/${ TEST_VIRTUAL_ACCOUNT }` });
     rzpInstance.virtualAccounts.fetch(TEST_VIRTUAL_ACCOUNT).then(response => {
@@ -75,7 +75,7 @@ module.exports.test4 = function () {
     });
 }}
 
-module.exports.test5 = function () {
+module.exports.test10_5 = function () {
 {
     const params = {
             notes: { 'comment': 'My notes' },
@@ -95,7 +95,7 @@ module.exports.test5 = function () {
     });
 }}
 
-module.exports.test6 = function () {
+module.exports.test10_6 = function () {
 {
     mocker.mock({ url: `${ SUB_PATH }/${ undefined }` });
     rzpInstance.virtualAccounts.close().then(() => {
@@ -105,7 +105,7 @@ module.exports.test6 = function () {
     });
 }}
 
-module.exports.test7 = function () {
+module.exports.test10_7 = function () {
 {
     mocker.mock({
         url: `${ SUB_PATH }/${ TEST_VIRTUAL_ACCOUNT }`,

@@ -12,7 +12,7 @@ const runIDRequiredTest = params => {
 };
 function done () {}
 
-module.exports.test0 = function () {
+module.exports.test1_0 = function () {
 {
     apiObj[methodName](...methodArgs).then(() => {
         done(new Error(`method ${ methodName } does not` + ` check for Addon ID`));

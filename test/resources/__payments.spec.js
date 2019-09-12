@@ -9,7 +9,7 @@ const {runCommonTests} = require('../../dist/utils/predefined-tests.js');
 const TEST_PAYMENT_ID = 'pay_sometestId';
 function done () {}
 
-module.exports.test0 = function () {
+module.exports.test5_0 = function () {
 {
     let expectedParams = {
         skip: 0,
@@ -22,7 +22,7 @@ module.exports.test0 = function () {
     });
 }}
 
-module.exports.test1 = function () {
+module.exports.test5_1 = function () {
 {
     let fromDate = 'Aug 25, 2016';
     let toDate = 'Aug 30, 2016';
@@ -47,12 +47,12 @@ module.exports.test1 = function () {
     });
 }}
 
-module.exports.test2 = function () {
+module.exports.test5_2 = function () {
 {
     assert.throws(rzpInstance.payments.fetch, '`payment_id` is mandatory', 'Should throw exception when paymentId is not provided');
 }}
 
-module.exports.test3 = function () {
+module.exports.test5_3 = function () {
 {
     let paymentId = 'pay_sometestId';
     mocker.mock({ url: `/payments/${ paymentId }` });
@@ -62,7 +62,7 @@ module.exports.test3 = function () {
     });
 }}
 
-module.exports.test4 = function () {
+module.exports.test5_4 = function () {
 {
     assert.throws(rzpInstance.payments.capture, '`payment_id` is mandatory', 'Should throw exception when no args are provided');
     try {
@@ -72,7 +72,7 @@ module.exports.test4 = function () {
     }
 }}
 
-module.exports.test5 = function () {
+module.exports.test5_5 = function () {
 {
     let paymentId = 'pay_sometestId';
     let captureAmount = 100;
@@ -91,12 +91,12 @@ module.exports.test5 = function () {
     });
 }}
 
-module.exports.test6 = function () {
+module.exports.test5_6 = function () {
 {
     assert.throws(rzpInstance.payments.refund, '`payment_id` is mandatory', 'Throw exception when payment_id is not provided');
 }}
 
-module.exports.test7 = function () {
+module.exports.test5_7 = function () {
 {
     let paymentId = 'pay_sometestId';
     let refundAmount = 100;
@@ -121,12 +121,12 @@ module.exports.test7 = function () {
     });
 }}
 
-module.exports.test8 = function () {
+module.exports.test5_8 = function () {
 {
     assert.throws(rzpInstance.payments.transfer, '`payment_id` is mandatory', 'Throw exception when payment_id is not provided');
 }}
 
-module.exports.test9 = function () {
+module.exports.test5_9 = function () {
 {
     let paymentId = 'pay_sometestpayId';
     mocker.mock({
@@ -158,7 +158,7 @@ module.exports.test9 = function () {
     });
 }}
 
-module.exports.test10 = function () {
+module.exports.test5_10 = function () {
 {
     rzpInstance.payments.bankTransfer().then(() => {
         done(new Error(`method bankTransfer does not check` + ` for payment_id`));

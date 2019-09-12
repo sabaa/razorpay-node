@@ -4,7 +4,7 @@ const assert = chai.assert;
 const Razorpay = require('../dist/razorpay');
 function done () {}
 
-module.exports.test0 = function () {
+module.exports.test0_0 = function () {
 {
     try {
         new Razorpay();
@@ -18,7 +18,7 @@ module.exports.test0 = function () {
     }
 }}
 
-module.exports.test1 = function () {
+module.exports.test0_1 = function () {
 {
     let instance = new Razorpay({
         key_id: 'XXX',

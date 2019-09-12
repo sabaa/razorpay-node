@@ -4,7 +4,7 @@ const assert = chai.assert;
 const nodeify = require('../../dist/utils/nodeify');
 function done () {}
 
-module.exports.test0 = function () {
+module.exports.test11_0 = function () {
 {
     let data = 'some success data';
     nodeify(Promise.resolve(data), (err, response) => {
@@ -14,7 +14,7 @@ module.exports.test0 = function () {
     });
 }}
 
-module.exports.test1 = function () {
+module.exports.test11_1 = function () {
 {
     let errorMsg = 'some error';
     nodeify(Promise.reject(errorMsg), (err, response) => {

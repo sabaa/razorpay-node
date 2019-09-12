@@ -5,7 +5,7 @@ const espree = require('espree');
 const estraverse = require('estraverse');
 const escodegen = require('escodegen');
 
-function transformTestFile (filePath/*, newFilePath*/) {
+function transformTestFile (filePath, numOfTestFiles) {
   let code = fs.readFileSync(filePath);
 
   const ast = espree.parse(code, {
@@ -22,7 +22,7 @@ function transformTestFile (filePath/*, newFilePath*/) {
   newScript += endOfLine;
 
   for (let i = 0; i < allTests.length; i ++) {
-    let newTest = endOfLine + 'module.exports.test' + i + ' = function () {' + endOfLine;
+    let newTest = endOfLine + 'module.exports.test' + numOfTestFiles + '_' + i + ' = function () {' + endOfLine;
     newTest += escodegen.generate(allTests[i]);
     newTest += '}';
     newTest += endOfLine;
@@ -99,8 +99,8 @@ function walk (dir) {
         results.push(file);
         let fileName = path.basename(file);
         let newFilePath = path.join(path.dirname(file), '__' + fileName);
-        let transformedFile = transformTestFile(file);
-        invokeTests(newFilePath, transformedFile);
+        let transformedFile = transformTestFile(file, numOfTestFiles);
+        invokeTests(newFilePath, transformedFile, numOfTestFiles);
         numOfTestFiles ++;
       }
     }
@@ -114,7 +114,7 @@ function invokeTests (newFilePath, transformedFile) {
   let testFileName = 'testFile' + numOfTestFiles;
   let invocationScript = "let " + testFileName + " = require('" + newFilePath + "');" + endOfLine;
   for (let i = 0; i < transformedFile.numOfTests; i ++) {
-    invocationScript = invocationScript + testFileName + ".test" + i + "();" + endOfLine;
+    invocationScript = invocationScript + testFileName + ".test" + numOfTestFiles + '_' + i + "();" + endOfLine;
   }
   invocationScript += endOfLine;
   fs.appendFileSync(invokeTestsFile, invocationScript);
